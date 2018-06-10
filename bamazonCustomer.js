@@ -16,11 +16,6 @@ var connection = mysql.createConnection({
         start();
   });
 
-  /*start(){
-    //toBuy();
-    //fulfill();
-  }*/
-
 function start() {
     connection.query ("SELECT * FROM products", function(err, res) {
       if(err) throw err;
@@ -90,7 +85,21 @@ function start() {
                       if (error) throw err;
                     }
                   );
-                  //console.log(res[i].stock_quantity);
+                  inquirer
+                  .prompt([
+                    {
+                      name: "again",
+                      type: "confirm",
+                      message: "Would you like to order more items?"
+                    }
+                  ]).then(function(more){
+                    if (more.again) {
+                      start();
+                    }else {
+                      console.log("Goodbye!");
+                      connection.end();
+                    }
+                  });
                 }
                 }
           });
