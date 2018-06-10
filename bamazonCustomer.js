@@ -24,7 +24,6 @@ var connection = mysql.createConnection({
 function start() {
     connection.query ("SELECT * FROM products", function(err, res) {
       if(err) throw err;
-      console.log(res);
       console.log("       ");
       console.log(b("Welcome! The following items are what we currently have in stock."));
       console.log("       ");
@@ -47,7 +46,54 @@ function start() {
         }
       ])
       .then(function(answer){
-        console.log(answer);
+        connection.query("SELECT * FROM products WHERE id=?", answer.item, function(err, res) {
+          if (err) throw err;
+
+          for (var i = 0; i < res.length; i++) {
+
+              if (answer.unit > res[i].stock_quantity) {
+
+                  console.log("***************************************************************");
+                  console.log(r("We only have " + res[i].stock_quantity + " in stock."));
+                  console.log("***************************************************************");
+                  inquirer
+                  .prompt([
+                    {
+                      name: "again",
+                      type: "confirm",
+                      message: "Would you like to try again?"
+                    }
+                  ]).then(function(reply){
+                    start();
+                  });
+
+              } else {
+                  //list item information for user for confirm prompt
+                  console.log("============================================================================");
+                  console.log(y("Success! " + res[i].product_name + " is in stock in the " + res[i].department_name + " department."));
+                  console.log("     ");
+                  console.log(g("Your total is $" + res[i].price * answer.unit));
+
+                  /*var newStock = (res[i].stock_quantity - answer.unit);
+                  console.log(newStock);*/
+                  connection.query(
+                    "UPDATE products SET ? WHERE ?",
+                    [
+                      {
+                        stock_quantity: res[i].stock_quantity - answer.unit
+                      },
+                      {
+                        id: answer.item
+                      }
+                    ],
+                    function(error) {
+                      if (error) throw err;
+                    }
+                  );
+                  //console.log(res[i].stock_quantity);
+                }
+                }
+          });
       });
-    });
-  }
+  });
+}
