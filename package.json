@@ -5,7 +5,7 @@
   "main": "bamazonCustomer.js",
   "scripts": {
     "start": "node bamazonCustomer.js"
-     },
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/charlotteasencio/bamazon.git"
