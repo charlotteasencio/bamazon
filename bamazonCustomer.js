@@ -59,7 +59,12 @@ function start() {
                       message: "Would you like to try again?"
                     }
                   ]).then(function(reply){
-                    start();
+                    if (reply.again) {
+                      start();
+                    }else {
+                      console.log("Goodbye!");
+                      connection.end();
+                    }
                   });
 
               } else {
