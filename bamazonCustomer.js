@@ -11,7 +11,7 @@ var connection = mysql.createConnection({
     database: "bamazon"
   });
   
-  connection.connect(function(err) {
+  connection.connect(function(err) { //THIS APPEARS TO BE WHERE HEROKU WON'T CONNECT. HAVE TRIED EVERYTHING!
     if (err) throw err;
         start();
   });
@@ -113,3 +113,7 @@ function start() {
       });
   });
 }
+
+app.listen(3060, function () {
+  console.log('Listening on port 3060!');
+ });
