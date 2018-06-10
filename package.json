@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/charlotteasencio/bamazon#readme",
   "dependencies": {
+    "chalk": "^2.4.1",
     "dotenv": "^6.0.0",
     "inquirer": "^6.0.0",
     "mysql": "^2.15.0"
