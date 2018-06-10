@@ -30,10 +30,10 @@ If they want to continue making purchases, they choose "y" and they program will
 
 [![more.png](https://s15.postimg.cc/ypf4lvzob/more.png)](https://postimg.cc/image/dsiwh81nb/)
 
-[![close1.png](https://s15.postimg.cc/kizdqobyj/close1.png)](https://postimg.cc/image/8h3zwj2pz/)
+[![close.png](https://s15.postimg.cc/8tve2r30b/close.png)](https://postimg.cc/image/ly0yffv1z/)
 
 If the user attemps to order more than the amout available of a particular item, they will be informed of the amount available and asked if they would like to try again. If they select "y" then the program runs again. If they select "n" then a "Goodbye!" message is displayed and the concetion is closed. 
 
 [![tryagain.png](https://s15.postimg.cc/3v7vo7c23/tryagain.png)](https://postimg.cc/image/wkurkug1z/)
 
-[![close.png](https://s15.postimg.cc/8tve2r30b/close.png)](https://postimg.cc/image/ly0yffv1z/)
+[![close1.png](https://s15.postimg.cc/kizdqobyj/close1.png)](https://postimg.cc/image/8h3zwj2pz/)
