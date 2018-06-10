@@ -20,7 +20,9 @@ function start() {
     connection.query ("SELECT * FROM products", function(err, res) {
       if(err) throw err;
       console.log("       ");
+      console.log("==========================================================================");
       console.log(b("Welcome! The following items are what we currently have in stock."));
+      console.log("==========================================================================");
       console.log("       ");
       console.log(g("ID" + " " + "PRODUCT" + "     " + "PRICE"));
       for (i = 0; i<res.length; i++) {
