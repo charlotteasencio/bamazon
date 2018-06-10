@@ -16,7 +16,7 @@ This is a program created to function like an example online marketplace in the 
 
 Upon cloning the repo and running "node bamazonCustomer" in the command line, the user will be shown all the items that are currently in stock in the store. They will also be promted to provide the ID number for the item they want to purchase. 
 
-image 
+[![open.png](https://s15.postimg.cc/cq8pyhnx7/open.png)](https://postimg.cc/image/ofcpmgevr/)
 
 Once the ID Number is selected, the user is prompted to enter how many units of that item they want to purchase. 
 
