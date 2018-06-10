@@ -14,5 +14,4 @@ This is a program created to function like an example online marketplace in the 
 
 ## Example of Use
 
-![Bamazon Open]
-![Alt text](bamazon/open.png?raw=true "Bamazon Open Screen")
+![Alt text](/bamazon/open.png?raw=true "Bamazon Open Screen")
