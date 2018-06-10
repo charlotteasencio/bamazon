@@ -4,8 +4,8 @@
   "description": "",
   "main": "bamazonCustomer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start": "node bamazonCustomer.js"
+     },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/charlotteasencio/bamazon.git"
