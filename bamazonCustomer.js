@@ -12,9 +12,7 @@ var connection = mysql.createConnection({
   });
   
   connection.connect(function(err) { //THIS APPEARS TO BE WHERE HEROKU WON'T CONNECT. According to Heroku Docs: ECONNREFUSED (Connection refused): No connection could be made because the target machine actively refused it. This usually results from trying to connect to a service that is inactive on the foreign host.
-    if (err) {
-      console.log(error);
-    }
+    if (err) throw err;
         start();
   });
 
